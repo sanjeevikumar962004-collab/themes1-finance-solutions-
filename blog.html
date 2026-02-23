@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <title>Blog - Financial Solutions</title>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+            <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="whitelogo.webp" alt="CLEANFIN Logo" class="logo-image">
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html" class="nav-link">HOME <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="index.html">Homepage 01</a></li>
+                            <li><a href="index2.html">Homepage 02</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="dashboard.html" class="nav-link">DASHBOARD</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link active">BLOG</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="social-icons">
+                    <a href="./404.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="./404.html"><i class="fab fa-x-twitter"></i></a> <!-- Assuming FontAwesome 6 for X icon -->
+                    <a href="./404.html"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="utility-icons">
+                    <a href="./404.html"><i class="fas fa-search"></i></a>
+
+                </div>
+                <a href="./login.html" class="btn-outline">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner / Hero -->
+    <div class="page-banner">
+        <div class="banner-overlay"></div>
+        <div class="banner-content gs-fade-up">
+            <h1 class="gs-text-reveal">Market Intelligence</h1>
+            <div class="breadcrumb gs-fade-up" style="animation-delay: 0.2s; margin-bottom: 15px;">
+                <a href="index.html">Home</a> <span>/</span> <span class="current">Blog</span>
+            </div>
+            <p class="gs-fade-up" style="animation-delay: 0.3s;">Proprietary analysis, macroeconomic forecasting, and
+                strategic advisories from the CLEANFIN intelligence desk.</p>
+        </div>
+    </div>
+
+    <!-- Blog Layout Container -->
+    <section class="blog-page-section">
+        <div class="blog-container">
+            <div class="blog-layout-grid">
+
+                <!-- Main Content Area (Posts) -->
+                <main class="blog-main-content">
+
+                    <!-- Featured Post -->
+                    <article class="featured-blog-card gs-fade-up">
+                        <div class="blog-image">
+                            <img src="./pexels-kampus-6248973.webp" alt="Featured Post Image">
+                            <span class="blog-category-badge">Macro Forensics</span>
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar-alt"></i> October 24, 2026</span>
+                                <span><i class="far fa-user"></i> By David Chen</span>
+                            </div>
+                            <h2 class="blog-title"><a href="#">Structuring Sovereign Capital: Navigating Liquidity in G7
+                                    Markets</a></h2>
+                            <p class="blog-excerpt">As geopolitical fragmentation accelerates, institutional capital
+                                must pivot toward advanced structuring to preserve yield. Our lead quantitative team
+                                outlines structural advantages.</p>
+                            <a href="404.html" class="blog-read-more">Read Full Article <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Standard Posts Grid -->
+                    <div class="standard-posts-grid">
+
+                        <!-- Post 1 -->
+                        <article class="standard-blog-card gs-fade-up" style="animation-delay: 0.1s;">
+                            <div class="blog-image">
+                                <img src="./pexels-mikhail-nilov-6931341.webp" alt="Blog Post Image">
+                                <span class="blog-category-badge">Private Wealth</span>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> Oct 18, 2026</span>
+                                </div>
+                                <h3 class="blog-title"><a href="#">Defensive Allocation: Hedging Against Inflationary
+                                        Spirals</a></h3>
+                                <p class="blog-excerpt">An in-depth look at employing fixed-income arbitrage and private
+                                    credit to secure structural yield.</p>
+                                <a href="404.html" class="blog-read-more">Read More <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Post 2 -->
+                        <article class="standard-blog-card gs-fade-up" style="animation-delay: 0.2s;">
+                            <div class="blog-image">
+                                <img src="./pexels-tima-miroshnichenko-6694492.webp" alt="Blog Post Image">
+                                <span class="blog-category-badge">M&A Advisory</span>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> Oct 12, 2026</span>
+                                </div>
+                                <h3 class="blog-title"><a href="#">Executing Cross-Border M&A: Mitigating Hidden
+                                        Liabilities</a></h3>
+                                <p class="blog-excerpt">A forensic approach to aggressive pre-acquisition audits,
+                                    ensuring seamless boardroom transitions.</p>
+                                <a href="404.html" class="blog-read-more">Read More <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Post 3 -->
+                        <article class="standard-blog-card gs-fade-up" style="animation-delay: 0.3s;">
+                            <div class="blog-image">
+                                <img src="./pexels-artempodrez-5716027.webp" alt="Blog Post Image">
+                                <span class="blog-category-badge">Risk Strategy</span>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> Oct 05, 2026</span>
+                                </div>
+                                <h3 class="blog-title"><a href="#">Algorithmic Risk Parity: The Future of Portfolio
+                                        Defense</a></h3>
+                                <p class="blog-excerpt">Deploying machine-learning models to continuously correct
+                                    allocation imbalances in real-time.</p>
+                                <a href="404.html" class="blog-read-more">Read More <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Post 4 -->
+                        <article class="standard-blog-card gs-fade-up" style="animation-delay: 0.4s;">
+                            <div class="blog-image">
+                                <img src="./pexels-cottonbro-5077047.webp" alt="Blog Post Image">
+                                <span class="blog-category-badge">Quantitative Tech</span>
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span><i class="far fa-calendar-alt"></i> Sep 28, 2026</span>
+                                </div>
+                                <h3 class="blog-title"><a href="#">High-Frequency Arbitration: Capturing
+                                        Micro-Yields</a></h3>
+                                <p class="blog-excerpt">A technical dissection of our proprietary latency-arbitrage
+                                    infrastructure used for institutional funds.</p>
+                                <a href="404.html" class="blog-read-more">Read More <i
+                                        class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="blog-pagination gs-fade-up" style="animation-delay: 0.5s;">
+                        <a href="#" class="page-link prev-link disabled"><i class="fas fa-arrow-left"></i> Prev</a>
+                        <div class="page-numbers">
+                            <a href="#" class="page-num active">1</a>
+                            <a href="#" class="page-num">2</a>
+                            <a href="#" class="page-num">3</a>
+                            <span>...</span>
+                            <a href="#" class="page-num">8</a>
+                        </div>
+                        <a href="#" class="page-link next-link">Next <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </main>
+
+                <!-- Sidebar -->
+                <aside class="blog-sidebar">
+
+                    <!-- Search Widget -->
+                    <div class="sidebar-widget gs-fade-up" style="animation-delay: 0.1s;">
+                        <h4 class="widget-title">Search</h4>
+                        <form class="sidebar-search-form" onsubmit="event.preventDefault();">
+                            <input type="text" placeholder="Search articles..." required>
+                            <button type="submit"><i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+
+                    <!-- Categories Widget -->
+                    <div class="sidebar-widget gs-fade-up" style="animation-delay: 0.2s;">
+                        <h4 class="widget-title">Categories</h4>
+                        <ul class="widget-categories-list">
+                            <li><a href="#">Private Wealth <span>(12)</span></a></li>
+                            <li><a href="#">M&A Advisory <span>(8)</span></a></li>
+                            <li><a href="#">Risk Strategies <span>(5)</span></a></li>
+                            <li><a href="#">Macro Forensics <span>(14)</span></a></li>
+                            <li><a href="#">Algorithmic Trading <span>(9)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Recent Posts Widget -->
+                    <div class="sidebar-widget gs-fade-up" style="animation-delay: 0.3s;">
+                        <h4 class="widget-title">Recent Posts</h4>
+                        <div class="widget-recent-posts">
+                            <a href="#" class="recent-post-item">
+                                <img src="./pexels-kampus-6248973.webp" alt="Thumb">
+                                <div>
+                                    <h5>Structuring Sovereign Capital: G7 Markets...</h5>
+                                    <span>Oct 24, 2026</span>
+                                </div>
+                            </a>
+                            <a href="#" class="recent-post-item">
+                                <img src="./pexels-mikhail-nilov-6931341.webp" alt="Thumb">
+                                <div>
+                                    <h5>Defensive Allocation: Hedging Against...</h5>
+                                    <span>Oct 18, 2026</span>
+                                </div>
+                            </a>
+                            <a href="#" class="recent-post-item">
+                                <img src="./pexels-tima-miroshnichenko-6694492.webp" alt="Thumb">
+                                <div>
+                                    <h5>Executing Cross-Border M&A: Hidden Liabilities...</h5>
+                                    <span>Oct 12, 2026</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tags Widget -->
+                    <div class="sidebar-widget gs-fade-up" style="animation-delay: 0.4s;">
+                        <h4 class="widget-title">Popular Tags</h4>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag-link">Sovereignty</a>
+                            <a href="#" class="tag-link">Arbitrage</a>
+                            <a href="#" class="tag-link">Taxation</a>
+                            <a href="#" class="tag-link">Private Equity</a>
+                            <a href="#" class="tag-link">Liquidity</a>
+                            <a href="#" class="tag-link">Algorithms</a>
+                            <a href="#" class="tag-link">Macro</a>
+                        </div>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Footer Top: 4 Columns -->
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="./whitelogo.webp" style="filter: brightness(0) invert(1);" alt="CLEANFIN Logo"
+                            class="logo-img">
+                    </a>
+                    <p class="footer-desc">STACKLY leverages a network of elite advisors to provide institutional-grade
+                        wealth management and advanced capital solutions in global markets.</p>
+                    <div class="social-links">
+                        <a href="./404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="./404.html" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="./404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Practice Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Private Equity</a></li>
+                        <li><a href="services.html">M&A Advisory</a></li>
+                        <li><a href="services.html">Asset Management</a></li>
+                        <li><a href="services.html">Tax & Estate Planning</a></li>
+                        <li><a href="services.html">Algorithmic Trading</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="./dashboard.html">Dashboard</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to receive our latest insights and financial market reports.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 STACKLY. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="./404.html">Privacy Policy</a>
+                    <a href="./404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

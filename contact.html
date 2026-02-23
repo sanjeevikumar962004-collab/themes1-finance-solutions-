@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Us - Financial Solutions</title>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+            <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="whitelogo.webp" alt="CLEANFIN Logo" class="logo-image">
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html" class="nav-link">HOME <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="index.html">Homepage 01</a></li>
+                            <li><a href="index2.html">Homepage 02</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="dashboard.html" class="nav-link">DASHBOARD</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="social-icons">
+                    <a href="./404.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="./404.html"><i class="fab fa-x-twitter"></i></a> <!-- Assuming FontAwesome 6 for X icon -->
+                    <a href="./404.html"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="utility-icons">
+                    <a href="./404.html"><i class="fas fa-search"></i></a>
+
+                </div>
+                <a href="./login.html" class="btn-outline">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner / Hero -->
+    <div class="page-banner" style="background-image: url('./pexels-kampus-8171202.webp');">
+        <div class="banner-overlay"></div>
+        <div class="banner-content gs-fade-up">
+            <h1 class="gs-text-reveal">Initiate Dialogue</h1>
+            <div class="breadcrumb gs-fade-up" style="animation-delay: 0.2s; margin-bottom: 15px;">
+                <a href="index.html">Home</a> <span>/</span> <span class="current">Contact Us</span>
+            </div>
+            <p class="gs-fade-up" style="animation-delay: 0.3s;">Connect with our senior analysts to discuss elite
+                capital structuring and institutional mandates.</p>
+        </div>
+    </div>
+
+    <!-- Contact Section Container -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-grid">
+
+                <!-- Left Column: Contact Information -->
+                <div class="contact-info-wrapper">
+                    <h2 class="gs-fade-up">Secure Communications</h2>
+                    <p class="contact-intro gs-fade-up">For inquiries regarding private wealth administration, M&A
+                        restructuring, or algorithmic advisory, connect with our intelligence desk below.</p>
+
+                    <div class="contact-info-cards">
+                        <!-- Card 1: Office -->
+                        <div class="info-card gs-fade-up" style="animation-delay: 0.1s;">
+                            <div class="icon-box">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Head Office</h3>
+                                <p>123 Financial District, Suite 500<br>New York, NY 10004</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Phone -->
+                        <div class="info-card gs-fade-up" style="animation-delay: 0.2s;">
+                            <div class="icon-box">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Phone Support</h3>
+                                <p>Main: +1 (800) 123-4567<br>Support: +1 (800) 987-6543</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Mail -->
+                        <div class="info-card gs-fade-up" style="animation-delay: 0.3s;">
+                            <div class="icon-box">
+                                <i class="far fa-envelope"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Email Connect</h3>
+                                <p>contact@cleanfin.com<br>support@cleanfin.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Modern Contact Form -->
+                <div class="contact-form-wrapper gs-fade-up" style="animation-delay: 0.4s;">
+                    <form class="modern-contact-form" onsubmit="event.preventDefault();">
+                        <h2>Request a Confidential Briefing</h2>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" placeholder="Doe" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="(555) 000-0000">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Mandate Focus (e.g., M&A Advisory)</label>
+                            <input type="text" id="subject" placeholder="Select a practice area" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Details</label>
+                            <textarea id="message" rows="5"
+                                placeholder="Brief detailing your operational or capital requirements..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary submit-btn">
+                            SUBMIT INQUIRY <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Footer Top: 4 Columns -->
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="./whitelogo.webp" style="filter: brightness(0) invert(1);" alt="CLEANFIN Logo"
+                            class="logo-img">
+                    </a>
+                    <p class="footer-desc">STACKLY leverages a network of elite advisors to provide institutional-grade
+                        wealth management and advanced capital solutions in global markets.</p>
+                    <div class="social-links">
+                        <a href="./404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="./404.html" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="./404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Practice Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Private Equity</a></li>
+                        <li><a href="services.html">M&A Advisory</a></li>
+                        <li><a href="services.html">Asset Management</a></li>
+                        <li><a href="services.html">Tax & Estate Planning</a></li>
+                        <li><a href="services.html">Algorithmic Trading</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="./dashboard.html">Dashboard</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to receive our latest insights and financial market reports.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 STACKLY. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="./404.html">Privacy Policy</a>
+                    <a href="./404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

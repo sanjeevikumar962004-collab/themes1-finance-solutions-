@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Financial Solutions</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+            <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="whitelogo.webp" alt="CLEANFIN Logo" class="logo-image">
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html" class="nav-link">HOME <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="index.html">Homepage 01</a></li>
+                            <li><a href="index2.html">Homepage 02</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">ABOUT</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="dashboard.html" class="nav-link">DASHBOARD</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="social-icons">
+                    <a href="./404.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="./404.html"><i class="fab fa-x-twitter"></i></a>
+                    <a href="./404.html"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="utility-icons">
+                    <a href="./404.html"><i class="fas fa-search"></i></a>
+
+                </div>
+                <a href="./login.html" class="btn-outline">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content gs-fade-up">
+            <h1 class="page-title gs-text-reveal">About Us</h1>
+            <div class="breadcrumb gs-fade-up" style="animation-delay: 0.2s;">
+                <a href="index.html">Home</a> <span>/</span> <span class="current">About</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview / Mission Section -->
+    <section class="about-overview-section">
+        <div class="overview-container">
+            <div class="overview-left gs-fade-up">
+                <div class="section-eyebrow style-light">OUR PHILOSOPHY</div>
+                <h2 class="section-title gs-text-reveal">Engineering alpha through rigorous quantitative analysis.</h2>
+                <p class="overview-text">At CLEANFIN, we believe that institutional wealth is architected on a
+                    foundation of unyielding risk management, macroeconomic foresight, and absolute structural
+                    integrity. For over a decade, we have acted as the discreet fiduciary to elite family offices and
+                    multinational corporate boards.</p>
+                <div class="mission-features">
+                    <div class="mission-feature gs-fade-up">
+                        <div class="mf-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Data-Driven</h4>
+                    </div>
+                    <div class="mission-feature gs-fade-up" style="animation-delay: 0.1s;">
+                        <div class="mf-icon"><i class="fas fa-globe"></i></div>
+                        <h4>Jurisdictional Edge</h4>
+                    </div>
+                    <div class="mission-feature gs-fade-up" style="animation-delay: 0.2s;">
+                        <div class="mf-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h4>Capital Preservation</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-right gs-fade-up">
+                <div class="overview-img-wrapper">
+                    <img src="./pexels-kampus-6248973.webp" alt="Office Collaboration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-hero">
+        <div class="testi-container">
+            <div class="testi-split gs-fade-up">
+                <!-- Left Side: Title & Controls -->
+                <div class="testi-left">
+                    <div class="section-eyebrow style-light border-rounded">ENDORSMENTS</div>
+                    <h2 class="testi-headline gs-text-reveal">Perspectives from<br>our partners</h2>
+                    <div class="testi-arrows">
+                        <button class="testi-arrow prev" aria-label="Previous Testimonial"><i
+                                class="fas fa-arrow-left"></i></button>
+                        <button class="testi-arrow next" aria-label="Next Testimonial"><i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Right Side: Vertical Divider + Quote Slider -->
+                <div class="testi-right gs-fade-up" style="animation-delay: 0.2s;">
+                    <div class="testi-carousel">
+                        <div class="testi-track" id="testiTrack">
+
+                            <!-- Slide 1 -->
+                            <div class="testi-slide active">
+                                <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                                <p class="testi-quote">CLEANFIN engineered a cross-border tax framework that optimized
+                                    our operational liquidity by 40% across three continents within a single fiscal
+                                    year.</p>
+                                <div class="testi-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="testi-author">
+                                    <img src="./c1.webp" alt="Stephen Welch">
+                                    <div class="author-details">
+                                        <h4>Stephen Welch</h4>
+                                        <span>MANAGING PARTNER</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="testi-slide">
+                                <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                                <p class="testi-quote">Their algorithmic modeling of our pension liabilities provided
+                                    unprecedented clarity, allowing for a seamless and highly profitable corporate
+                                    acquisition.</p>
+                                <div class="testi-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="testi-author">
+                                    <img src="./c2.webp" alt="Marcus Thompson">
+                                    <div class="author-details">
+                                        <h4>Marcus Thompson</h4>
+                                        <span>BOARD DIRECTOR</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="testi-slide">
+                                <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                                <p class="testi-quote">In an environment of rising interest rates, CLEANFIN successfully
+                                    deployed a fixed-income hedging strategy that completely insulated our corporate
+                                    treasury.</p>
+                                <div class="testi-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="testi-author">
+                                    <img src="./c3.webp" alt="Elena Rodriguez">
+                                    <div class="author-details">
+                                        <h4>Elena Rodriguez</h4>
+                                        <span>CHIEF FINANCIAL OFFICER</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="testi-slide">
+                                <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                                <p class="testi-quote">The team's exclusive access to top-quartile private debt funds
+                                    has fundamentally shifted our family office's return profile over the last five
+                                    years.</p>
+                                <div class="testi-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="testi-author">
+                                    <img src="./p1.webp" alt="Michael Chang">
+                                    <div class="author-details">
+                                        <h4>Michael Chang</h4>
+                                        <span>FAMILY OFFICE PRINCIPAL</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 5 -->
+                            <div class="testi-slide">
+                                <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                                <p class="testi-quote">Beyond mere asset allocation, CLEANFIN acts as an outsourced CIO.
+                                    They are actively driving our multi-generational wealth transition with absolute
+                                    discretion.</p>
+                                <div class="testi-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="testi-author">
+                                    <img src="./p2.webp" alt="Amanda Higgins">
+                                    <div class="author-details">
+                                        <h4>Amanda Higgins</h4>
+                                        <span>CO-CHAIRWOMAN</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 6 -->
+                            <div class="testi-slide">
+                                <div class="quote-mark"><i class="fas fa-quote-left"></i></div>
+                                <p class="testi-quote">An indispensable ally in international M&A. Their forensic due
+                                    diligence wiped out massive unseen liabilities long before the final acquisition was
+                                    penned.</p>
+                                <div class="testi-stars">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                        class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <div class="testi-author">
+                                    <img src="./p3.webp" alt="Jonathan Reed">
+                                    <div class="author-details">
+                                        <h4>Jonathan Reed</h4>
+                                        <span>PRIVATE EQUITY PARTNER</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Dots Navigation -->
+                        <div class="testi-dots" id="testiDots">
+                            <span class="dot active" data-slide="0"></span>
+                            <span class="dot" data-slide="1"></span>
+                            <span class="dot" data-slide="2"></span>
+                            <span class="dot" data-slide="2"></span>
+                            <span class="dot" data-slide="2"></span>
+                            <span class="dot" data-slide="2"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="team-container">
+            <div class="section-header-center gs-fade-up">
+                <div class="section-eyebrow style-light">LEADERSHIP</div>
+                <h2 class="section-title text-center gs-text-reveal">Meet the experts behind your success.</h2>
+            </div>
+
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-card gs-fade-up">
+                    <div class="team-img-wrapper">
+                        <img src="./c1.webp" alt="CEO">
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Robert Chen</h3>
+                        <p>Managing Director</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card gs-fade-up" style="animation-delay: 0.1s;">
+                    <div class="team-img-wrapper">
+                        <img src="./c2.webp" alt="CFO">
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Sarah Jenkins</h3>
+                        <p>Head of Global Equities</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card gs-fade-up" style="animation-delay: 0.2s;">
+                    <div class="team-img-wrapper">
+                        <img src="./c3.webp" alt="Head of Analysis">
+                        <div class="team-socials">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>David Miller</h3>
+                        <p>Chief Quantitative Analyst</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Footer Top: 4 Columns -->
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="./whitelogo.webp" style="filter: brightness(0) invert(1);" alt="CLEANFIN Logo"
+                            class="logo-img">
+                    </a>
+                    <p class="footer-desc">STACKLY leverages a network of elite advisors to provide institutional-grade
+                        wealth management and advanced capital solutions in global markets.</p>
+                    <div class="social-links">
+                        <a href="./404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="./404.html" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="./404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Practice Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Private Equity</a></li>
+                        <li><a href="services.html">M&A Advisory</a></li>
+                        <li><a href="services.html">Asset Management</a></li>
+                        <li><a href="services.html">Tax & Estate Planning</a></li>
+                        <li><a href="services.html">Algorithmic Trading</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="./dashboard.html">Dashboard</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to receive our latest insights and financial market reports.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 STACKLY. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="./404.html">Privacy Policy</a>
+                    <a href="./404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

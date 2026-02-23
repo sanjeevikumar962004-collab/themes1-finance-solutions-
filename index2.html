@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Financial Solutions- Home 02</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Home 2 Specific Styles */
+        .home2-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 20px 20px;
+            overflow: hidden;
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .h2-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .h2-hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.1);
+            /* for parallax/zoom effect */
+        }
+
+        .h2-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(30, 56, 45, 0.9) 0%, rgba(30, 56, 45, 0.6) 50%, rgba(30, 56, 45, 0.3) 100%);
+        }
+
+        .h2-hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .h2-subtitle {
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .h2-subtitle::before {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: #fff;
+        }
+
+        .h2-title {
+            font-size: clamp(4rem, 8vw, 6.5rem);
+            font-weight: 800;
+            line-height: 1.05;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+        }
+
+        .h2-desc {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin-bottom: 50px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+        }
+
+        .h2-actions {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .h2-actions .btn-primary {
+            margin-bottom: 0;
+        }
+
+        .h2-btn-outline {
+            padding: 18px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: var(--transition);
+        }
+
+        .h2-btn-outline:hover {
+            background-color: #fff;
+            color: var(--primary-color);
+        }
+
+        /* Home 2 Cards Grid */
+        .home2-cards-section {
+            padding: 120px 0;
+            background-color: #f9f9f9;
+        }
+
+        .h2-cards-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .h2-section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .h2-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .h2-card {
+            background: #fff;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .h2-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        .h2-card-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            background: #f0f5f3;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .h2-card:hover .h2-card-icon {
+            background: var(--primary-color);
+            color: #fff;
+        }
+
+        .h2-card-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .h2-card-desc {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .h2-card-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            gap: 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .h2-card-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .h2-card:hover .h2-card-link i {
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 991px) {
+            .h2-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .h2-cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .h2-title {
+                font-size: 3rem;
+            }
+
+            .h2-actions {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Horizontal Process Accordion */
+        .home2-process-section {
+            padding: 100px 20px;
+            background-color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hp-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hp-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .hp-label {
+            display: inline-block;
+            padding: 6px 16px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .hp-title {
+            font-size: 3rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.2;
+        }
+
+        .hp-accordion-container {
+            display: flex;
+            height: 500px;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .hp-panel {
+            position: relative;
+            flex: 0 0 80px;
+            border-right: 1px solid #eaeaea;
+            cursor: pointer;
+            overflow: hidden;
+            transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+            background: #fff;
+        }
+
+        .hp-panel:last-child {
+            border-right: none;
+        }
+
+        .hp-panel.active {
+            flex: 1 1 0;
+            cursor: default;
+        }
+
+        /* Collapsed Content */
+        .hp-collapsed {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            transition: opacity 0.4s ease;
+        }
+
+        .hp-panel.active .hp-collapsed {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .hp-number {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #666;
+            margin-bottom: auto;
+        }
+
+        .hp-title-vertical {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #666;
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+
+        /* Expanded Content */
+        .hp-expanded {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            opacity: 0;
+            transition: opacity 0.4s ease 0.2s;
+            pointer-events: none;
+        }
+
+        .hp-panel.active .hp-expanded {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .hp-expanded-left {
+            flex: 1;
+            padding: 60px 40px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-width: 500px;
+        }
+
+        .hp-expanded-right {
+            flex: 1;
+            min-width: 400px;
+        }
+
+        .hp-expanded-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hp-watermark {
+            position: absolute;
+            top: 40px;
+            left: 20px;
+            font-size: 8rem;
+            font-weight: 800;
+            color: rgba(0, 0, 0, 0.03);
+            line-height: 1;
+            z-index: 0;
+        }
+
+        .hp-expanded-title {
+            position: relative;
+            z-index: 1;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+        }
+
+        .hp-desc {
+            position: relative;
+            z-index: 1;
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 480px;
+        }
+
+        .hp-list {
+            position: relative;
+            z-index: 1;
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .hp-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .hp-list li svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        @media (max-width: 991px) {
+            .hp-accordion-container {
+                flex-direction: column;
+                height: auto;
+                min-height: 500px;
+            }
+
+            .hp-panel {
+                flex: 0 0 60px;
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #eaeaea;
+            }
+
+            .hp-panel.active {
+                flex: 1 1 auto;
+                height: auto;
+            }
+
+            .hp-collapsed {
+                flex-direction: row;
+                width: 100%;
+                height: 60px;
+                padding: 0 20px;
+                align-items: center;
+            }
+
+            .hp-number {
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+
+            .hp-title-vertical {
+                writing-mode: horizontal-tb;
+                transform: none;
+            }
+
+            .hp-expanded {
+                position: relative;
+                flex-direction: column;
+                height: auto;
+            }
+
+            .hp-expanded-left {
+                min-width: 0;
+                padding: 40px 20px;
+            }
+
+            .hp-expanded-right {
+                min-width: 0;
+                height: 300px;
+            }
+        }
+
+        /* Why Choose Us Section */
+        .h2-why-choose-us {
+            padding: 100px 20px;
+            background-color: #fff;
+        }
+
+        .h2-wcu-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .h2-wcu-left .section-eyebrow {
+            display: inline-block;
+            padding: 6px 16px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .h2-wcu-title {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .h2-wcu-desc {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .h2-wcu-stats {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .h2-stat-box {
+            background-color: #222;
+            color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            flex: 0 0 50%;
+        }
+
+        .h2-stat-num {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .h2-stat-text {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+
+        .h2-stat-avatars {
+            display: flex;
+            align-items: center;
+        }
+
+        .h2-stat-avatars img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #222;
+            margin-left: -10px;
+        }
+
+        .h2-stat-avatars img:first-child {
+            margin-left: 0;
+        }
+
+        .h2-stat-add {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px dashed rgba(255, 255, 255, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: -10px;
+            background-color: #222;
+            color: #fff;
+            font-size: 1.2rem;
+            z-index: 10;
+        }
+
+        .h2-progress-bars {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .h2-progress-item {
+            width: 100%;
+        }
+
+        .h2-progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+        }
+
+        .h2-progress-bar-bg {
+            width: 100%;
+            height: 6px;
+            background-color: #eaeaea;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .h2-progress-bar-fill {
+            height: 100%;
+            background-color: #fbc02d;
+            /* Yellow from design */
+            border-radius: 10px;
+            width: 0;
+            /* Animated via JS */
+            transition: width 1.5s ease-out;
+        }
+
+        /* Apply primary dark color to specific bars if needed */
+        .h2-progress-item:nth-child(2) .h2-progress-bar-fill {
+            background-color: #222;
+        }
+
+        .h2-wcu-right {
+            position: relative;
+            height: 600px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .h2-wcu-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .h2-wcu-badge {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #fbc02d;
+            padding: 40px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .h2-wcu-badge-icon {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        .h2-wcu-badge-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.4;
+        }
+
+        .h2-wcu-badge-arrow {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-self: flex-end;
+            margin-top: 10px;
+            color: #1a1a1a;
+        }
+
+        @media (max-width: 991px) {
+            .h2-wcu-container {
+                grid-template-columns: 1fr;
+            }
+
+            .h2-wcu-right {
+                height: 400px;
+            }
+
+            .h2-wcu-stats {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .h2-stat-box {
+                flex: auto;
+            }
+        }
+
+        /* Services List Section (Dark Accordion) */
+        .h2-services-list {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 120px 0;
+        }
+
+        .h2-sl-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .h2-sl-header {
+            margin-bottom: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .h2-sl-label {
+            display: inline-block;
+            padding: 6px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .h2-sl-title {
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 600;
+            line-height: 1.1;
+            color: #fff;
+            max-width: 800px;
+        }
+
+        .h2-sl-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 0;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .h2-sl-item:first-child {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .h2-sl-item:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .h2-sl-num {
+            font-size: 1.2rem;
+            font-weight: 600;
+            width: 80px;
+            color: #fff;
+        }
+
+        .h2-sl-img {
+            width: 150px;
+            height: 60px;
+            border-radius: 40px;
+            overflow: hidden;
+            margin-right: 40px;
+            flex-shrink: 0;
+        }
+
+        .h2-sl-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .h2-sl-name {
+            font-size: 1.8rem;
+            font-weight: 600;
+            flex: 1;
+            color: #fff;
+            min-width: 250px;
+        }
+
+        .h2-sl-desc {
+            flex: 2;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+            padding-right: 40px;
+        }
+
+        .h2-sl-arrow {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.5);
+            transition: var(--transition);
+        }
+
+        .h2-sl-item:hover .h2-sl-arrow {
+            color: #fff;
+            transform: translateX(10px) rotate(-45deg);
+        }
+
+        @media (max-width: 991px) {
+            .h2-sl-item {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .h2-sl-name {
+                width: 100%;
+                flex: none;
+            }
+
+            .h2-sl-desc {
+                width: 100%;
+                flex: none;
+                padding-right: 0;
+            }
+
+            .h2-sl-img {
+                display: none;
+                /* Hide snippet on small screens to save space */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+            <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="whitelogo.webp" alt="CLEANFIN Logo" class="logo-image">
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html" class="nav-link">HOME <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="index.html">Homepage 01</a></li>
+                            <li><a href="index2.html">Homepage 02</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="dashboard.html" class="nav-link">DASHBOARD</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="social-icons">
+                    <a href="./404.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="./404.html"><i class="fab fa-x-twitter"></i></a>
+                    <a href="./404.html"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="utility-icons">
+                    <a href="./404.html"><i class="fas fa-search"></i></a>
+
+                </div>
+                <a href="./login.html" class="btn-outline">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- NEW HERO SECTION FOR HOME 2 -->
+    <section class="home2-hero">
+        <div class="h2-hero-bg gs-parallax">
+            <img src="pexels-kampus-6248973.webp" alt="Hero background">
+            <div class="h2-hero-overlay"></div>
+        </div>
+        <div class="h2-hero-content">
+            <div class="h2-subtitle gs-text-reveal">ADVANCED WEALTH STRATEGY</div>
+            <h1 class="h2-title gs-text-reveal">Command Your<br>Capital Edge.</h1>
+            <p class="h2-desc gs-text-reveal">Harness quantitative models and exclusive private equity channels to
+                systematically compound your legacy.</p>
+            <div class="h2-actions gs-text-reveal">
+                <a href="404.html" class="btn-primary">INITIATE CONSULTATION ↗</a>
+                <a href="404.html" class="h2-btn-outline">PRACTICE AREAS</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- Services List Section (Dark) -->
+    <section class="h2-services-list">
+        <div class="h2-sl-container">
+            <div class="h2-sl-header gs-fade-up">
+                <span class="h2-sl-label">PRACTICE AREAS</span>
+                <h2 class="h2-sl-title gs-text-reveal">We provide elite structural solutions to multinational entities.
+                </h2>
+            </div>
+
+            <div class="h2-sl-list">
+                <!-- Service 1 -->
+                <div class="h2-sl-item gs-fade-up">
+                    <div class="h2-sl-num">01</div>
+                    <div class="h2-sl-img">
+                        <img src="pexels-artempodrez-5716027.webp" alt="M&A Advisory">
+                    </div>
+                    <div class="h2-sl-name">M&A<br>Advisory</div>
+                    <div class="h2-sl-desc">Facilitating complex cross-border acquisitions from target identification to
+                        final boardroom integration.</div>
+                    <i class="fas fa-arrow-right h2-sl-arrow"></i>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="h2-sl-item gs-fade-up" style="animation-delay: 0.1s;">
+                    <div class="h2-sl-num">02</div>
+                    <div class="h2-sl-img">
+                        <img src="pexels-artempodrez-6779401.webp" alt="Risk Assessment">
+                    </div>
+                    <div class="h2-sl-name">Risk<br>Forensics</div>
+                    <div class="h2-sl-desc">Operating intricate quantitative risk assessments to shield corporate
+                        treasuries from market tail-risks.</div>
+                    <i class="fas fa-arrow-right h2-sl-arrow"></i>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="h2-sl-item gs-fade-up" style="animation-delay: 0.2s;">
+                    <div class="h2-sl-num">03</div>
+                    <div class="h2-sl-img">
+                        <img src="pexels-artempodrez-6779570.webp" alt="Tax Navigation">
+                    </div>
+                    <div class="h2-sl-name">Treasury<br>Structuring</div>
+                    <div class="h2-sl-desc">Engineering resilient tax and liquidity frameworks tailored to lower
+                        liability limits across jurisdictions.</div>
+                    <i class="fas fa-arrow-right h2-sl-arrow"></i>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="h2-sl-item gs-fade-up" style="animation-delay: 0.3s;">
+                    <div class="h2-sl-num">04</div>
+                    <div class="h2-sl-img">
+                        <img src="pexels-artempodrez-6779716.webp" alt="Private Wealth">
+                    </div>
+                    <div class="h2-sl-name">Private<br>Wealth</div>
+                    <div class="h2-sl-desc">Aligning high-net-worth liquidity with exclusive private equity vehicles for
+                        outsized alternative yields.</div>
+                    <i class="fas fa-arrow-right h2-sl-arrow"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW PROCESS ACCORDION SECTION FOR HOME 2 -->
+    <section class="home2-process-section">
+        <div class="hp-container">
+            <div class="hp-header gs-fade-up">
+                <span class="hp-label">OUR PROCESS</span>
+                <h2 class="hp-title gs-text-reveal">Experience the Power of<br>Financial Innovation</h2>
+            </div>
+            <div class="hp-accordion-container gs-fade-up">
+                <!-- Panel 1 -->
+                <div class="hp-panel active">
+                    <div class="hp-collapsed">
+                        <span class="hp-number">01</span>
+                        <span class="hp-title-vertical">Capital Audit</span>
+                    </div>
+                    <div class="hp-expanded">
+                        <div class="hp-expanded-left">
+                            <div class="hp-watermark">01</div>
+                            <h3 class="hp-expanded-title">Capital Audit</h3>
+                            <p class="hp-desc">Every sophisticated investment strategy begins with an exhaustive audit
+                                of your liquidity profile and reserved capital.</p>
+                            <p class="hp-desc">We deploy precision analytics on your current holdings to expose margin
+                                inefficiencies and uncover unseen opportunities.</p>
+                            <ul class="hp-list">
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Translating raw market data into actionable blueprints
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Deep-dive risk calculation
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Initial capital assessment
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hp-expanded-right">
+                            <img src="pexels-kampus-8171202.webp" alt="Highlight successful">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 2 -->
+                <div class="hp-panel">
+                    <div class="hp-collapsed">
+                        <span class="hp-number">02</span>
+                        <span class="hp-title-vertical">Alternative Allocation</span>
+                    </div>
+                    <div class="hp-expanded">
+                        <div class="hp-expanded-left">
+                            <div class="hp-watermark">02</div>
+                            <h3 class="hp-expanded-title">Alternative Allocation</h3>
+                            <p class="hp-desc">We construct highly asymmetrical portfolios designed to capture premium
+                                yields across private equity, private credit, and real estate mandates.</p>
+                            <p class="hp-desc">Our dedicated analysts build out comprehensive roadmaps specifically
+                                curated around your organization's precise risk appetite.</p>
+                            <ul class="hp-list">
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Comprehensive portfolio realignment
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Yield maximization workshops
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Liability and debt mitigation structures
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hp-expanded-right">
+                            <img src="pexels-cottonbro-5077047.webp" alt="Team Development">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3 -->
+                <div class="hp-panel">
+                    <div class="hp-collapsed">
+                        <span class="hp-number">03</span>
+                        <span class="hp-title-vertical">Execution & Custody</span>
+                    </div>
+                    <div class="hp-expanded">
+                        <div class="hp-expanded-left">
+                            <div class="hp-watermark">03</div>
+                            <h3 class="hp-expanded-title">Execution & Custody</h3>
+                            <p class="hp-desc">Deploying institutional capital requires immediate, flawless trade
+                                execution alongside bulletproof asset custody arrangements.</p>
+                            <p class="hp-desc">Timelines are strictly met with precision while ensuring that your
+                                broader enterprise operations remain completely undisrupted.</p>
+                            <ul class="hp-list">
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Dedicated deployment guidance
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Rapid and secure fund settlement
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Continuous custodian oversight
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hp-expanded-right">
+                            <img src="pexels-shkrabaanthony-5466244.webp" alt="Client Satisfaction">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 4 -->
+                <div class="hp-panel">
+                    <div class="hp-collapsed">
+                        <span class="hp-number">04</span>
+                        <span class="hp-title-vertical">Yield Optimization</span>
+                    </div>
+                    <div class="hp-expanded">
+                        <div class="hp-expanded-left">
+                            <div class="hp-watermark">04</div>
+                            <h3 class="hp-expanded-title">Yield Optimization</h3>
+                            <p class="hp-desc">Alpha generation never sleeps. We integrate live quantitative
+                                dashboarding so you can dynamically monitor your portfolio's absolute return trajectory.
+                            </p>
+                            <p class="hp-desc">Proactive algorithmic adjustments are executed dynamically to keep your
+                                capital positioned favorably ahead of shifting global variables.</p>
+                            <ul class="hp-list">
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Live Return Dashboards
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Quarterly alpha review cycles
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="#1e382d" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    Adaptive scaling support
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hp-expanded-right">
+                            <img src="pexels-mikhail-nilov-6931341.webp" alt="Financial Strategies">
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+
+    <!-- Why Choose Us Section -->
+    <section class="h2-why-choose-us">
+        <div class="h2-wcu-container">
+            <div class="h2-wcu-left gs-fade-up">
+                <span class="section-eyebrow">WHY CHOOSE US</span>
+                <h2 class="h2-wcu-title">Engineering the architecture of generational wealth.</h2>
+                <p class="h2-wcu-desc">Our mandate is absolute performance. We partner with select family offices and
+                    corporate treasuries to navigate complex global markets, utilizing proprietary models to secure
+                    consistent, outsized returns securely.</p>
+
+                <div class="h2-wcu-stats gs-fade-up" style="animation-delay: 0.2s;">
+                    <div class="h2-stat-box">
+                        <div class="h2-stat-num">$5B+</div>
+                        <div class="h2-stat-text">Total AUM actively administrated.</div>
+                        <div class="h2-stat-avatars">
+                            <img src="./pexels-artempodrez-6779401.webp" alt="Avatar">
+                            <img src="./pexels-artempodrez-6779570.webp" alt="Avatar">
+                            <img src="./pexels-artempodrez-6779716.webp" alt="Avatar">
+                            <div class="h2-stat-add">+</div>
+                        </div>
+                    </div>
+
+                    <div class="h2-progress-bars">
+                        <div class="h2-progress-item">
+                            <div class="h2-progress-header">
+                                <span>Equities Hedging</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="h2-progress-bar-bg">
+                                <div class="h2-progress-bar-fill" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="h2-progress-item">
+                            <div class="h2-progress-header">
+                                <span>Fixed Income Arbitrage</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="h2-progress-bar-bg">
+                                <div class="h2-progress-bar-fill" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="h2-progress-item">
+                            <div class="h2-progress-header">
+                                <span>Private Market Access</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="h2-progress-bar-bg">
+                                <div class="h2-progress-bar-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h2-wcu-right gs-fade-left">
+                <img src="pexels-arina-krasnikova-6016344.webp" alt="Business Woman" style="object-position: top;">
+                <div class="h2-wcu-badge">
+                    <i class="fas fa-medal h2-wcu-badge-icon"></i>
+                    <div class="h2-wcu-badge-text">Financial success of any person or organization</div>
+                    <div class="h2-wcu-badge-arrow"><i class="fas fa-chevron-up"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Section (Reusing from original but right after hero) -->
+    <div class="marquee-section gs-fade-in" style="margin-top: 0; background-color: #f0f5f3;">
+        <div class="marquee-content" style="padding: 20px 0;">
+            <div class="marquee-group" style="color: var(--primary-color);">
+                <span>STOCK CUSTODIAN <i class="fas fa-asterisk"></i> MARKET RESEARCH <i class="fas fa-asterisk"></i>
+                    RISK ANALYSIS <i class="fas fa-asterisk"></i> FINANCIAL ADVISORY <i
+                        class="fas fa-asterisk"></i></span>
+            </div>
+            <div class="marquee-group" aria-hidden="true" style="color: var(--primary-color);">
+                <span>STOCK CUSTODIAN <i class="fas fa-asterisk"></i> MARKET RESEARCH <i class="fas fa-asterisk"></i>
+                    RISK ANALYSIS <i class="fas fa-asterisk"></i> FINANCIAL ADVISORY <i
+                        class="fas fa-asterisk"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data & FAQ Section -->
+    <section class="data-faq-section">
+        <div class="data-faq-container">
+            <div class="faq-header">
+                <div class="section-eyebrow style-light">OUR NETWORK</div>
+                <h2 class="faq-title">Leveraging elite connections strictly<br>to secure off-market opportunities.</h2>
+            </div>
+
+            <div class="data-faq-split gs-fade-up">
+                <!-- Left: Chart -->
+                <div class="chart-container">
+                    <canvas id="financeChart"></canvas>
+                </div>
+
+                <!-- Right: Accordion -->
+                <div class="faq-accordion">
+                    <!-- Item 1 -->
+                    <div class="accordion-item active">
+                        <div class="accordion-header">
+                            <span class="acc-number">01.</span>
+                            <h3 class="acc-question">What is your approach to alternative investments?</h3>
+                            <span class="acc-icon"><i class="fas fa-arrow-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>We source top-decile private equity funds and exclusive co-investment opportunities,
+                                providing our clients with access to high-yielding, uncorrelated assets that standard
+                                advisors cannot reach.</p>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="acc-number">02.</span>
+                            <h3 class="acc-question">How do you handle multi-jurisdictional tax reporting?</h3>
+                            <span class="acc-icon"><i class="fas fa-arrow-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Our dedicated tax counsel synchronizes with your local CPAs to orchestrate seamless
+                                reporting, while legally optimizing trust structures and corporate entities across
+                                favorable international jurisdictions.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span class="acc-number">03.</span>
+                            <h3 class="acc-question">What is the onboarding process for new family office clients?</h3>
+                            <span class="acc-icon"><i class="fas fa-arrow-down"></i></span>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Following signing of NDAs, we conduct a swift 14-day discovery sprint to audit your
+                                existing IPS, immediately after which we present a tailored restructure plan focused on
+                                immediate yield enhancement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="./whitelogo.webp" style="filter: brightness(0) invert(1);" alt="CLEANFIN Logo"
+                            class="logo-img">
+                    </a>
+                    <p class="footer-desc">STACKLY leverages a network of elite advisors to provide institutional-grade
+                        wealth management and advanced capital solutions in global markets.</p>
+                    <div class="social-links">
+                        <a href="./404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="./404.html" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="./404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Practice Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Private Equity</a></li>
+                        <li><a href="services.html">M&A Advisory</a></li>
+                        <li><a href="services.html">Asset Management</a></li>
+                        <li><a href="services.html">Tax & Estate Planning</a></li>
+                        <li><a href="services.html">Algorithmic Trading</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="./dashboard.html">Dashboard</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to receive our latest insights and financial market reports.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 STACKLY. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="./404.html">Privacy Policy</a>
+                    <a href="./404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+    <!-- GSAP added for Home 2 specific animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Register ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Hero Animations
+            const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+            // Animate hero background
+            tl.fromTo(".h2-hero-bg img",
+                { scale: 1.2 },
+                { scale: 1, duration: 2 }
+            );
+
+            // Reveal text items
+            tl.fromTo(".gs-text-reveal",
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1, stagger: 0.15 },
+                "-=1.5"
+            );
+
+            // Parallax effect on hero background on scroll
+            gsap.to(".h2-hero-bg img", {
+                yPercent: 20,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: ".home2-hero",
+                    start: "top top",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+
+            // Fade Up Elements
+            gsap.utils.toArray('.gs-fade-up').forEach(elem => {
+                gsap.fromTo(elem,
+                    { y: 50, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: elem,
+                            start: "top 85%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+            });
+
+            // Stagger Cards
+            ScrollTrigger.batch(".gs-stagger-card", {
+                onEnter: batch => gsap.fromTo(batch,
+                    { opacity: 0, y: 50 },
+                    { opacity: 1, y: 0, stagger: 0.15, duration: 0.8, ease: "power2.out" }
+                ),
+                start: "top 85%",
+                once: true
+            });
+
+            // Fade Left Elements (For Why Choose Us Image)
+            gsap.utils.toArray('.gs-fade-left').forEach(elem => {
+                gsap.fromTo(elem,
+                    { x: 50, opacity: 0 },
+                    {
+                        x: 0,
+                        opacity: 1,
+                        duration: 1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: elem,
+                            start: "top 85%",
+                            toggleActions: "play none none none"
+                        }
+                    }
+                );
+            });
+
+            // Progress Bars Animation
+            const progressBars = document.querySelectorAll('.h2-progress-bar-fill');
+            if (progressBars.length > 0) {
+                ScrollTrigger.create({
+                    trigger: ".h2-progress-bars",
+                    start: "top 90%",
+                    once: true,
+                    onEnter: () => {
+                        progressBars.forEach(bar => {
+                            bar.style.width = bar.getAttribute('data-width');
+                        });
+                    }
+                });
+            }
+
+            // Accordion Logic
+            const accordions = document.querySelectorAll('.hp-panel');
+            accordions.forEach(acc => {
+                acc.addEventListener('click', () => {
+                    accordions.forEach(a => a.classList.remove('active'));
+                    acc.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

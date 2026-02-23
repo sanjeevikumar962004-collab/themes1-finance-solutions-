@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Financial Solutions</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+            <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="whitelogo.webp" alt="CLEANFIN Logo" class="logo-image">
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html" class="nav-link">HOME <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="index.html">Homepage 01</a></li>
+                            <li><a href="index2.html">Homepage 02</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link active">SERVICES</a></li>
+                    <li class="nav-item"><a href="dashboard.html" class="nav-link">DASHBOARD</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="social-icons">
+                    <a href="./404.html"><i class="fab fa-facebook-f"></i></a>
+                    <a href="./404.html"><i class="fab fa-x-twitter"></i></a>
+                    <a href="./404.html"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="utility-icons">
+                    <a href="./404.html"><i class="fas fa-search"></i></a>
+
+                </div>
+                <a href="./login.html" class="btn-outline">Login</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero Section -->
+    <section class="page-hero" style="background-image: url('./pexels-kampus-6248973.webp');">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content gs-fade-up">
+            <h1 class="page-title gs-text-reveal">Our Services</h1>
+            <div class="breadcrumb gs-fade-up" style="animation-delay: 0.2s;">
+                <a href="index.html">Home</a> <span>/</span> <span class="current">Services</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="services-page-section">
+        <div class="services-page-container">
+            <div class="section-header-center gs-fade-up">
+                <div class="section-eyebrow style-light">CORE MANDATES</div>
+                <h2 class="section-title text-center gs-text-reveal">Comprehensive institutional financial solutions.
+                </h2>
+            </div>
+
+            <div class="services-page-grid">
+                <!-- Service 1 -->
+                <div class="service-page-card gs-stagger-card">
+                    <div class="sp-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Private Wealth</h3>
+                    <p>Bespoke asset allocation designed to sustainably compound capital across volatile global markets.
+                    </p>
+                    <a href="404.html" class="sp-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-page-card gs-stagger-card">
+                    <div class="sp-icon"><i class="fas fa-building"></i></div>
+                    <h3>M&A Advisory</h3>
+                    <p>Engineering highly lucrative cross-border acquisitions and bulletproof structural integrations.
+                    </p>
+                    <a href="404.html" class="sp-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-page-card gs-stagger-card">
+                    <div class="sp-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Risk Forensics</h3>
+                    <p>Deployment of proprietary quantitative models to isolate and seamlessly hedge against black-swan
+                        events.</p>
+                    <a href="404.html" class="sp-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-page-card gs-stagger-card">
+                    <div class="sp-icon"><i class="fas fa-search-dollar"></i></div>
+                    <h3>Alternative Yields</h3>
+                    <p>Exclusive sourcing of top-decile private equity, real estate, and private credit vehicles.</p>
+                    <a href="404.html" class="sp-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-page-card gs-stagger-card">
+                    <div class="sp-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Treasury Management</h3>
+                    <p>Optimizing corporate liquidity and insulating operational reserves through precision fixed-income
+                        arbitrage.</p>
+                    <a href="404.html" class="sp-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-page-card gs-stagger-card">
+                    <div class="sp-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Entity Structuring</h3>
+                    <p>Architecting resilient, multi-jurisdictional tax frameworks to maximize asset sovereignty
+                        globally.
+                    </p>
+                    <a href="404.html" class="sp-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-section">
+        <div class="why-choose-container">
+            <div class="why-choose-img gs-fade-up">
+                <img src="./pexels-kampus-8171202.webp" alt="Consultation">
+            </div>
+            <div class="why-choose-content gs-fade-left">
+                <div class="section-eyebrow style-light">WHY CHOOSE US</div>
+                <h2 class="section-title gs-text-reveal">Architecting the infrastructure of institutional success.</h2>
+                <p>Our obligation is to absolute performance. CLEANFIN deploys elite analytical teams to safeguard
+                    corporate treasuries and family office capital against global turbulence.</p>
+                <ul class="why-list">
+                    <li><i class="fas fa-check-circle"></i> <strong>$5B+ AUM:</strong> Total capital directly managed
+                        and successfully architected.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Jurisdictional Edge:</strong> Strategic intelligence
+                        outposts providing immediate foresight in 15 nations.</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Unrestricted Access:</strong> Direct, uncompromising
+                        contact with senior analysts acting as your outsourced CIO.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process Section -->
+    <section class="process-section">
+        <div class="process-container">
+            <div class="section-header-center gs-fade-up">
+                <div class="section-eyebrow style-light">HOW WE WORK</div>
+                <h2 class="section-title text-center gs-text-reveal">A streamlined approach to wealth creation.</h2>
+            </div>
+
+            <div class="process-grid">
+                <!-- Step 1 -->
+                <div class="process-step gs-fade-up">
+                    <div class="step-number">01</div>
+                    <h3>Capital Discovery</h3>
+                    <p>We initiate an exhaustive audit of your current holdings to identify immediate yield
+                        inefficiencies.
+                    </p>
+                </div>
+                <!-- Step 2 -->
+                <div class="process-step gs-fade-up" style="animation-delay: 0.1s;">
+                    <div class="step-number">02</div>
+                    <h3>Structural Engineering</h3>
+                    <p>Our quantitative teams construct highly resilient portfolios aligned precisely with your mandated
+                        risk profile.
+                    </p>
+                </div>
+                <!-- Step 3 -->
+                <div class="process-step gs-fade-up" style="animation-delay: 0.2s;">
+                    <div class="step-number">03</div>
+                    <h3>Flawless Deployment</h3>
+                    <p>We seamlessly integrate capital and initiate live algorithmic tracking to secure your competitive
+                        advantage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Statistics Section -->
+    <section class="stats-section">
+        <div class="stats-overlay"></div>
+        <div class="stats-container gs-fade-up">
+            <div class="stat-item">
+                <h3 class="stat-number">150+</h3>
+                <p class="stat-label">Elite Analysts</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number">$5B+</h3>
+                <p class="stat-label">AUM Administrated</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number">98%</h3>
+                <p class="stat-label">Client Retention</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number">15</h3>
+                <p class="stat-label">Global Hubs</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="cta-section">
+        <div class="cta-container gs-fade-up">
+            <h2 class="cta-title gs-text-reveal">Prepared to Command Your Capital?</h2>
+            <p class="cta-desc">Initiate a private briefing with CLEANFIN and access our exclusive strategic mandates.
+            </p>
+            <a href="404.html" class="btn-primary cta-btn">Request a Briefing</a>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Footer Top: 4 Columns -->
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="./whitelogo.webp" style="filter: brightness(0) invert(1);" alt="CLEANFIN Logo"
+                            class="logo-img">
+                    </a>
+                    <p class="footer-desc">STACKLY leverages a network of elite advisors to provide institutional-grade
+                        wealth management and advanced capital solutions in global markets.</p>
+                    <div class="social-links">
+                        <a href="./404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="./404.html" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="./404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Practice Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Private Equity</a></li>
+                        <li><a href="services.html">M&A Advisory</a></li>
+                        <li><a href="services.html">Asset Management</a></li>
+                        <li><a href="services.html">Tax & Estate Planning</a></li>
+                        <li><a href="services.html">Algorithmic Trading</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="./dashboard.html">Dashboard</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to receive our latest insights and financial market reports.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 STACKLY. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="./404.html">Privacy Policy</a>
+                    <a href="./404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

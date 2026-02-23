@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard - Financial Solutions</title>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+            <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+            <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+                stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        </svg>
+    </div>
+
+    <!-- Header -->
+    <header class="header dashboard-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="whitelogo.webp" alt="CLEANFIN Logo" class="logo-image">
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item has-dropdown">
+                        <a href="index.html" class="nav-link">HOME <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="index.html">Homepage 01</a></li>
+                            <li><a href="index2.html">Homepage 02</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">SERVICES</a></li>
+                    <li class="nav-item"><a href="dashboard.html" class="nav-link active">DASHBOARD</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">BLOG</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">CONTACT US</a></li>
+                </ul>
+            </nav>
+
+            <!-- Header Actions -->
+            <div class="header-actions">
+                <div class="utility-icons">
+                    <a href="./404.html"><i class="fas fa-search"></i></a>
+
+                </div>
+                <a href="./login.html" class="btn-outline">Login</a>
+                <div class="user-profile">
+                    <img src="./c3.webp" alt="User Avatar" class="avatar">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dashboard Main Layout -->
+    <div class="dashboard-wrapper">
+
+        <!-- Sidebar Navigation -->
+        <aside class="dashboard-sidebar">
+            <ul class="d-side-nav">
+                <li class="d-side-item active"><a href="#" data-target="#tab-overview"><i class="fas fa-home"></i>
+                        Overview</a></li>
+                <li class="d-side-item"><a href="#" data-target="#tab-analytics"><i class="fas fa-chart-line"></i>
+                        Analytics</a></li>
+                <li class="d-side-item"><a href="#" data-target="#tab-wallets"><i class="fas fa-wallet"></i> Wallets</a>
+                </li>
+                <li class="d-side-item"><a href="#" data-target="#tab-transactions"><i class="fas fa-exchange-alt"></i>
+                        Transactions</a></li>
+                <li class="d-side-item"><a href="#" data-target="#tab-settings"><i class="fas fa-cog"></i> Settings</a>
+                </li>
+                <li class="d-side-item logout"><a href="#"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="dashboard-main">
+
+            <!-- OVERVIEW TAB (Active by default) -->
+            <div id="tab-overview" class="d-tab-pane active">
+                <!-- Welcome Banner -->
+                <div class="d-welcome-banner gs-fade-up">
+                    <div>
+                        <h2>Welcome back, Ms. Jenkins.</h2>
+                        <p>Here is the current status of your institutional portfolio.</p>
+                    </div>
+                    <a href="./404.html" class="btn-primary d-action-btn"
+                        style="display: inline-flex; text-decoration: none;"><i class="fas fa-plus"></i> Initiate
+                        Wire</a>
+                </div>
+
+                <!-- Metrics Grid -->
+                <div class="d-metrics-grid">
+                    <!-- Metric 1 -->
+                    <div class="d-metric-card gs-fade-up" style="animation-delay: 0.1s;">
+                        <div class="m-icon"><i class="fas fa-coins"></i></div>
+                        <div class="m-info">
+                            <p class="m-label">Total AUM</p>
+                            <h3 class="m-value">$12,456,000.00</h3>
+                            <p class="m-trend positive"><i class="fas fa-arrow-up"></i> 1.2% this month</p>
+                        </div>
+                    </div>
+                    <!-- Metric 2 -->
+                    <div class="d-metric-card gs-fade-up" style="animation-delay: 0.2s;">
+                        <div class="m-icon"><i class="fas fa-arrow-down"></i></div>
+                        <div class="m-info">
+                            <p class="m-label">YTD Yield</p>
+                            <h3 class="m-value">$842,150.80</h3>
+                            <p class="m-trend positive"><i class="fas fa-arrow-up"></i> 4.2% annualized</p>
+                        </div>
+                    </div>
+                    <!-- Metric 3 -->
+                    <div class="d-metric-card gs-fade-up" style="animation-delay: 0.3s;">
+                        <div class="m-icon"><i class="fas fa-arrow-up"></i></div>
+                        <div class="m-info">
+                            <p class="m-label">Active Liabilities</p>
+                            <h3 class="m-value">$1,124,230.40</h3>
+                            <p class="m-trend negative"><i class="fas fa-arrow-up"></i> 2.1% this month</p>
+                        </div>
+                    </div>
+                    <!-- Metric 4 -->
+                    <div class="d-metric-card gs-fade-up" style="animation-delay: 0.4s;">
+                        <div class="m-icon"><i class="fas fa-piggy-bank"></i></div>
+                        <div class="m-info">
+                            <p class="m-label">Liquid Reserves</p>
+                            <h3 class="m-value">$3,885,420.00</h3>
+                            <p class="m-trend positive"><i class="fas fa-arrow-up"></i> 0.4% this month</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard Content Split (Chart & Transactions) -->
+                <div class="d-content-split">
+                    <!-- Chart Section -->
+                    <div class="d-panel d-chart-panel gs-fade-up" style="animation-delay: 0.5s;">
+                        <div class="d-panel-header">
+                            <h3>Capital Allocation Overview</h3>
+                            <div class="d-panel-actions">
+                                <select class="d-select">
+                                    <option>Last 6 Months</option>
+                                    <option>This Year</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="d-chart-area">
+                            <div class="css-chart-bars">
+                                <div class="c-bar-group">
+                                    <div class="c-bar income" style="height: 60%;"></div>
+                                    <div class="c-bar expense" style="height: 40%;"></div><span>Jan</span>
+                                </div>
+                                <div class="c-bar-group">
+                                    <div class="c-bar income" style="height: 70%;"></div>
+                                    <div class="c-bar expense" style="height: 50%;"></div><span>Feb</span>
+                                </div>
+                                <div class="c-bar-group">
+                                    <div class="c-bar income" style="height: 85%;"></div>
+                                    <div class="c-bar expense" style="height: 35%;"></div><span>Mar</span>
+                                </div>
+                                <div class="c-bar-group">
+                                    <div class="c-bar income" style="height: 50%;"></div>
+                                    <div class="c-bar expense" style="height: 60%;"></div><span>Apr</span>
+                                </div>
+                                <div class="c-bar-group">
+                                    <div class="c-bar income" style="height: 90%;"></div>
+                                    <div class="c-bar expense" style="height: 45%;"></div><span>May</span>
+                                </div>
+                                <div class="c-bar-group">
+                                    <div class="c-bar income" style="height: 100%;"></div>
+                                    <div class="c-bar expense" style="height: 30%;"></div><span>Jun</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Transactions -->
+                    <div class="d-panel d-transactions-panel gs-fade-up" style="animation-delay: 0.6s;">
+                        <div class="d-panel-header">
+                            <h3>Recent Capital Movements</h3>
+                            <a href="#" class="d-link-view">View All</a>
+                        </div>
+                        <ul class="d-tx-list">
+                            <li class="d-tx-item">
+                                <div class="tx-icon tx-in"><i class="fas fa-arrow-down"></i></div>
+                                <div class="tx-details">
+                                    <h4>Global Corp Inc.</h4>
+                                    <span>Today, 10:45 AM</span>
+                                </div>
+                                <div class="tx-amount tx-positive">+$4,500.00</div>
+                            </li>
+                            <li class="d-tx-item">
+                                <div class="tx-icon tx-out"><i class="fas fa-arrow-up"></i></div>
+                                <div class="tx-details">
+                                    <h4>Software Subscription</h4>
+                                    <span>Yesterday, 02:30 PM</span>
+                                </div>
+                                <div class="tx-amount">- $120.00</div>
+                            </li>
+                            <li class="d-tx-item">
+                                <div class="tx-icon tx-out"><i class="fas fa-arrow-up"></i></div>
+                                <div class="tx-details">
+                                    <h4>Office Let</h4>
+                                    <span>Oct 15, 09:00 AM</span>
+                                </div>
+                                <div class="tx-amount">- $2,400.00</div>
+                            </li>
+                            <li class="d-tx-item">
+                                <div class="tx-icon tx-in"><i class="fas fa-arrow-down"></i></div>
+                                <div class="tx-details">
+                                    <h4>Client Retainer</h4>
+                                    <span>Oct 12, 11:20 AM</span>
+                                </div>
+                                <div class="tx-amount tx-positive">+$8,000.00</div>
+                            </li>
+                            <li class="d-tx-item">
+                                <div class="tx-icon tx-out"><i class="fas fa-arrow-up"></i></div>
+                                <div class="tx-details">
+                                    <h4>Tax Payment</h4>
+                                    <span>Oct 10, 04:15 PM</span>
+                                </div>
+                                <div class="tx-amount">- $1,850.00</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> <!-- End Overview Tab -->
+
+            <!-- ANALYTICS TAB -->
+            <div id="tab-analytics" class="d-tab-pane">
+                <div class="d-welcome-banner gs-fade-up">
+                    <div>
+                        <h2>Analytics Hub</h2>
+                        <p>Deep dive into your portfolio performance metrics.</p>
+                    </div>
+                </div>
+
+                <div class="d-content-split">
+                    <!-- Spending Categories -->
+                    <div class="d-panel gs-fade-up" style="animation-delay: 0.1s;">
+                        <div class="d-panel-header">
+                            <h3>Allocation by Asset Class</h3>
+                        </div>
+                        <div class="d-category-list">
+                            <div class="d-category-item">
+                                <div class="d-cat-info">
+                                    <span><i class="fas fa-building"></i> Commercial Real Estate</span>
+                                    <span>$4,200,000.00</span>
+                                </div>
+                                <div class="d-progress-bar">
+                                    <div class="d-progress-fill" style="width: 33%;"></div>
+                                </div>
+                            </div>
+                            <div class="d-category-item">
+                                <div class="d-cat-info">
+                                    <span><i class="fas fa-chart-pie"></i> Private Equity</span>
+                                    <span>$3,850,000.00</span>
+                                </div>
+                                <div class="d-progress-bar">
+                                    <div class="d-progress-fill" style="width: 30%;"></div>
+                                </div>
+                            </div>
+                            <div class="d-category-item">
+                                <div class="d-cat-info">
+                                    <span><i class="fas fa-chart-line"></i> Equities</span>
+                                    <span>$2,420,000.00</span>
+                                </div>
+                                <div class="d-progress-bar">
+                                    <div class="d-progress-fill" style="width: 20%;"></div>
+                                </div>
+                            </div>
+                            <div class="d-category-item">
+                                <div class="d-cat-info">
+                                    <span><i class="fas fa-file-invoice-dollar"></i> Fixed Income</span>
+                                    <span>$1,986,000.00</span>
+                                </div>
+                                <div class="d-progress-bar">
+                                    <div class="d-progress-fill" style="width: 17%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Analytics Summary -->
+                    <div class="d-panel gs-fade-up" style="animation-delay: 0.2s;">
+                        <div class="d-panel-header">
+                            <h3>Insights</h3>
+                        </div>
+                        <div class="d-insights-list">
+                            <div class="d-insight-card">
+                                <h4>Portfolio Volatility (30D)</h4>
+                                <h2>0.04%</h2>
+                                <p class="positive"><i class="fas fa-arrow-down"></i> 1.2% vs last month</p>
+                            </div>
+                            <div class="d-insight-card">
+                                <h4>Primary Yield Source</h4>
+                                <h2>Private Equity</h2>
+                                <p>Generates 45% of total portfolio ROI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Analytics Tab -->
+
+            <!-- WALLETS TAB -->
+            <div id="tab-wallets" class="d-tab-pane">
+                <div class="d-welcome-banner gs-fade-up">
+                    <div>
+                        <h2>Linked Accounts</h2>
+                        <p>Manage your institutional banking connections and routing.</p>
+                    </div>
+                </div>
+
+                <div class="d-wallets-grid">
+                    <!-- Card 1 -->
+                    <div class="d-credit-card gs-fade-up" style="animation-delay: 0.1s;">
+                        <div class="card-top">
+                            <i class="fas fa-microchip card-chip"></i>
+                            <i class="fab fa-cc-visa card-logo"></i>
+                        </div>
+                        <div class="card-number">**** **** **** 4289</div>
+                        <div class="card-bottom">
+                            <div class="card-holder">
+                                <span>Card Holder</span>
+                                <p>SARAH JENKINS</p>
+                            </div>
+                            <div class="card-expiry">
+                                <span>Expires</span>
+                                <p>12/28</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="d-credit-card alt-theme gs-fade-up" style="animation-delay: 0.2s;">
+                        <div class="card-top">
+                            <i class="fas fa-microchip card-chip"></i>
+                            <i class="fab fa-cc-mastercard card-logo"></i>
+                        </div>
+                        <div class="card-number">**** **** **** 8832</div>
+                        <div class="card-bottom">
+                            <div class="card-holder">
+                                <span>Card Holder</span>
+                                <p>SARAH JENKINS</p>
+                            </div>
+                            <div class="card-expiry">
+                                <span>Expires</span>
+                                <p>09/27</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add New Card -->
+                    <a href="./404.html" class="d-add-card gs-fade-up"
+                        style="animation-delay: 0.3s; text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: center;">
+                        <i class="fas fa-plus"></i>
+                        <p>Link New Wallet</p>
+                    </a>
+                </div>
+            </div> <!-- End Wallets Tab -->
+
+            <!-- TRANSACTIONS TAB -->
+            <div id="tab-transactions" class="d-tab-pane">
+                <div class="d-welcome-banner gs-fade-up">
+                    <div>
+                        <h2>Capital Movements</h2>
+                        <p>Search and filter your complete institutional transfer activity.</p>
+                    </div>
+                </div>
+
+                <div class="d-panel gs-fade-up" style="animation-delay: 0.1s;">
+                    <div class="d-filters">
+                        <div class="d-form-group search-group">
+                            <a href="./404.html" style="color: inherit;"><i class="fas fa-search"></i></a>
+                            <input type="text" class="d-input" placeholder="Search transactions..."
+                                onkeypress="if(event.key === 'Enter') window.location.href='./404.html'">
+                        </div>
+                        <div class="d-form-group">
+                            <select class="d-input">
+                                <option>All Status</option>
+                                <option>Completed</option>
+                                <option>Pending</option>
+                            </select>
+                        </div>
+                        <div class="d-form-group">
+                            <input type="date" class="d-input">
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="d-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Transaction</th>
+                                    <th>Category</th>
+                                    <th>Status</th>
+                                    <th>Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Oct 24, 2026</td>
+                                    <td><strong>Global Corp Inc.</strong><br><span>Dividend Distribution</span></td>
+                                    <td>Yield</td>
+                                    <td><span class="d-badge success">Completed</span></td>
+                                    <td class="tx-positive">+$450,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 23, 2026</td>
+                                    <td><strong>Legal & Compliance</strong><br><span>Firm Retainer</span></td>
+                                    <td>Overhead</td>
+                                    <td><span class="d-badge success">Completed</span></td>
+                                    <td>-$12,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 15, 2026</td>
+                                    <td><strong>Real Estate Holding</strong><br><span>Commercial Lease Income</span>
+                                    </td>
+                                    <td>Yield</td>
+                                    <td><span class="d-badge warning">Pending</span></td>
+                                    <td class="tx-positive">+$240,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 12, 2026</td>
+                                    <td><strong>Private Equity</strong><br><span>Exit Disbursement</span></td>
+                                    <td>Capital</td>
+                                    <td><span class="d-badge success">Completed</span></td>
+                                    <td class="tx-positive">+$800,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 10, 2026</td>
+                                    <td><strong>Tax Obligation</strong><br><span>International Corporate</span></td>
+                                    <td>Liability</td>
+                                    <td><span class="d-badge success">Completed</span></td>
+                                    <td>-$185,000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Oct 05, 2026</td>
+                                    <td><strong>Advisory Fees</strong><br><span>Q3 Strategic Consulting</span></td>
+                                    <td>Overhead</td>
+                                    <td><span class="d-badge success">Completed</span></td>
+                                    <td>-$14,500.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-pagination">
+                        <button class="d-page-btn" disabled><i class="fas fa-chevron-left"></i></button>
+                        <button class="d-page-btn active">1</button>
+                        <button class="d-page-btn">2</button>
+                        <button class="d-page-btn">3</button>
+                        <button class="d-page-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div> <!-- End Transactions Tab -->
+
+            <!-- SETTINGS TAB -->
+            <div id="tab-settings" class="d-tab-pane">
+                <div class="d-welcome-banner gs-fade-up">
+                    <div>
+                        <h2>Account Settings</h2>
+                        <p>Manage your profile, security, and preferences.</p>
+                    </div>
+                </div>
+
+                <div class="d-content-split">
+                    <!-- Profile Form -->
+                    <div class="d-panel gs-fade-up" style="animation-delay: 0.1s;">
+                        <div class="d-panel-header">
+                            <h3>Profile Information</h3>
+                        </div>
+                        <form class="d-form">
+                            <div class="d-form-row">
+                                <div class="d-form-group">
+                                    <label>First Name</label>
+                                    <input type="text" class="d-input" value="Sarah">
+                                </div>
+                                <div class="d-form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" class="d-input" value="Jenkins">
+                                </div>
+                            </div>
+                            <div class="d-form-group">
+                                <label>Email Address</label>
+                                <input type="email" class="d-input" value="sarah.jenkins@example.com">
+                            </div>
+                            <div class="d-form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" class="d-input" value="+1 (555) 123-4567">
+                            </div>
+                            <a href="./404.html" class="btn-primary d-action-btn"
+                                style="margin-top: 20px; display: inline-flex; text-decoration: none;">Save
+                                Changes</a>
+                        </form>
+                    </div>
+
+                    <!-- Preferences -->
+                    <div class="d-panel gs-fade-up" style="animation-delay: 0.2s;">
+                        <div class="d-panel-header">
+                            <h3>Preferences</h3>
+                        </div>
+                        <div class="d-preferences-list">
+                            <div class="d-pref-item">
+                                <div>
+                                    <h4>Executive Briefings</h4>
+                                    <p>Receive daily quantitative summary reports.</p>
+                                </div>
+                                <label class="d-toggle-switch">
+                                    <input type="checkbox" checked>
+                                    <span class="d-slider"></span>
+                                </label>
+                            </div>
+                            <div class="d-pref-item">
+                                <div>
+                                    <h4>Wire Approvals</h4>
+                                    <p>Require multi-factor sign-off for transfers > $1M</p>
+                                </div>
+                                <label class="d-toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="d-slider"></span>
+                                </label>
+                            </div>
+                            <div class="d-pref-item">
+                                <div>
+                                    <h4>Dark Mode</h4>
+                                    <p>Enable dark theme dashboard.</p>
+                                </div>
+                                <label class="d-toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="d-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Settings Tab -->
+
+        </main>
+    </div>
+
+    <!-- Modern Footer -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <!-- Footer Top: 4 Columns -->
+            <div class="footer-grid">
+                <!-- Col 1: Brand -->
+                <div class="footer-col brand-col">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="./whitelogo.webp" style="filter: brightness(0) invert(1);" alt="CLEANFIN Logo"
+                            class="logo-img">
+                    </a>
+                    <p class="footer-desc">STACKLY leverages a network of elite advisors to provide institutional-grade
+                        wealth management and advanced capital solutions in global markets.</p>
+                    <div class="social-links">
+                        <a href="./404.html" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="./404.html" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="./404.html" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Practice Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Private Equity</a></li>
+                        <li><a href="services.html">M&A Advisory</a></li>
+                        <li><a href="services.html">Asset Management</a></li>
+                        <li><a href="services.html">Tax & Estate Planning</a></li>
+                        <li><a href="services.html">Algorithmic Trading</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Company -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="./dashboard.html">Dashboard</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter -->
+                <div class="footer-col newsletter-col">
+                    <h4 class="footer-heading">Newsletter</h4>
+                    <p class="footer-text">Subscribe to receive our latest insights and financial market reports.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Email Address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 STACKLY. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="./404.html">Privacy Policy</a>
+                    <a href="./404.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
