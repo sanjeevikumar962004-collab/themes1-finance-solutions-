@@ -145,11 +145,13 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">First Name</label>
-                                <input type="text" id="firstName" placeholder="John" required>
+                                <input type="text" id="firstName" placeholder="John" required pattern="[A-Za-z\s]+"
+                                    title="First name must contain only letters.">
                             </div>
                             <div class="form-group">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" id="lastName" placeholder="Doe" required>
+                                <input type="text" id="lastName" placeholder="Doe" required pattern="[A-Za-z\s]+"
+                                    title="Last name must contain only letters.">
                             </div>
                         </div>
 
@@ -160,7 +162,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" placeholder="(555) 000-0000">
+                                <input type="tel" id="phone" placeholder="0000000000" maxlength="10" inputmode="numeric"
+                                    pattern="[0-9]*">
                             </div>
                         </div>
 
@@ -240,19 +243,19 @@
                         <button type="submit"><i class="fas fa-paper-plane"></i></button>
                     </form>
                 </div>
-            
-                
-            </div>
-</div>
 
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p class="copyright">&copy; 2026 STACKLY. All rights reserved.</p>
-                <div class="legal-links">
-                    <a href="./404.html">Privacy Policy</a>
-                    <a href="./404.html">Terms of Service</a>
-                </div>
+
             </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 STACKLY. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="./404.html">Privacy Policy</a>
+                <a href="./404.html">Terms of Service</a>
+            </div>
+        </div>
         </div>
     </footer>
 

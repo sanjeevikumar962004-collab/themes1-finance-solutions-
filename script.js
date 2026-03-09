@@ -463,6 +463,64 @@ document.addEventListener('DOMContentLoaded', () => {
     const routeTo404 = (e) => {
         e.preventDefault(); // Stop actual form submission
 
+        // Custom Validation
+        const form = e.target;
+
+        // 1. Name Validation (No numbers allowed)
+        const nameInputs = form.querySelectorAll('input[type="text"][id*="name" i], input[type="text"][placeholder*="name" i]');
+        for (const input of nameInputs) {
+            if (/\d/.test(input.value)) {
+                alert("Please enter a valid name. Numeric characters are not allowed.");
+                input.focus();
+                return; // Stop submission
+            }
+        }
+
+        // 2. Phone Validation (Numbers only, exactly 10 digits)
+        const phoneInputs = form.querySelectorAll('input[type="tel"], input[id*="phone" i], input[placeholder*="phone" i]');
+        for (const input of phoneInputs) {
+            if (input.value.trim() !== "") {
+                const numericOnly = input.value.replace(/\D/g, '');
+                if (numericOnly.length !== 10) {
+                    alert("Please enter a valid 10-digit phone number.");
+                    input.focus();
+                    return;
+                }
+            }
+        }
+
+        // 3. Email Validation (Whitelisted domains + strict lowercase check)
+        const allowedDomains = [
+            'gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com', 'live.com',
+            'icloud.com', 'me.com', 'mac.com', 'aol.com', 'protonmail.com',
+            'zoho.com', 'yandex.com', 'rediffmail.com', 'msn.com', 'gmx.com',
+            'mail.com', 'inbox.com', 'fastmail.com', 'tutanota.com'
+        ];
+        const emailInputs = form.querySelectorAll('input[type="email"]');
+        for (const input of emailInputs) {
+            const emailValue = input.value.trim();
+            if (emailValue !== "") {
+                const atIndex = emailValue.indexOf('@');
+                if (atIndex !== -1) {
+                    const domain = emailValue.substring(atIndex + 1);
+
+                    // 1. Reject if domain has any uppercase characters
+                    if (/[A-Z]/.test(domain)) {
+                        alert("Please enter your email domain in lowercase (e.g., gmail.com instead of GMAIL.COM).");
+                        input.focus();
+                        return;
+                    }
+
+                    // 2. Reject if domain is not in the accepted whitelist
+                    if (!allowedDomains.includes(domain)) {
+                        alert("Please use a valid email provider (e.g., gmail.com, outlook.com, yahoo.com).");
+                        input.focus();
+                        return;
+                    }
+                }
+            }
+        }
+
         // Brief loading simulation (e.g., spinning button icon)
         const btn = e.target.querySelector('button[type="submit"]');
         if (btn) {
@@ -550,7 +608,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Global catch-all for remaining empty anchor buttons
+    // 5. Global Phone Input Constraint (Numbers only, max 10)
+    const phoneFields = document.querySelectorAll('input[type="tel"], input[id*="phone" i], input[placeholder*="phone" i]');
+    phoneFields.forEach(field => {
+        // Only apply to fields NOT in the dashboard (per user request)
+        if (!field.closest('.dashboard-wrapper')) {
+            field.addEventListener('input', function (e) {
+                // Remove non-digits
+                let value = this.value.replace(/\D/g, '');
+                // Limit to 10 characters
+                if (value.length > 10) {
+                    value = value.slice(0, 10);
+                }
+                this.value = value;
+            });
+        }
+    });
+
+    // 6. Global catch-all for remaining empty anchor buttons
     const emptyLinks = document.querySelectorAll('a[href="#"]');
     emptyLinks.forEach(link => {
         // Exclude dynamic elements like tabs that use explicit internal paths
@@ -668,3 +743,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+/* =========================================
+   DASHBOARD TRANSACTIONS FILTER & PAGINATION
+   ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    // Transaction Filtering
+    const txFilter = document.querySelector('#tab-transactions .d-filters select.d-input');
+    const txRows = document.querySelectorAll('#tab-transactions .d-table tbody tr');
+
+    if (txFilter && txRows.length > 0) {
+        txFilter.addEventListener('change', (e) => {
+            const selectedStatus = e.target.value.toLowerCase().trim();
+
+            txRows.forEach(row => {
+                const statusBadge = row.querySelector('td:nth-child(4) .d-badge');
+                if (statusBadge) {
+                    const rowStatus = statusBadge.textContent.toLowerCase().trim();
+                    if (selectedStatus === 'all status' || selectedStatus === 'all') {
+                        row.style.display = '';
+                    } else if (rowStatus === selectedStatus) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                }
+            });
+        });
+    }
+
+    // Pagination 404 routing
+    const pageBtns = document.querySelectorAll('.d-page-btn');
+    if (pageBtns.length > 0) {
+        pageBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.location.href = './404.html';
+            });
+        });
+    }
+});
