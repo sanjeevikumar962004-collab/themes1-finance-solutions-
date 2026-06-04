@@ -38,13 +38,13 @@ ul {
 
 /* Header */
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 9999;
     padding: 20px 40px;
-    background: transparent;
+    background: var(--primary-color);
 }
 
 .header-container {
@@ -5375,4 +5375,64 @@ body.auth-body {
     .error-title {
         font-size: 2rem;
     }
+}
+
+/* =========================================
+   PREMIUM CUSTOM CURSOR
+   ========================================= */
+.custom-cursor, .custom-cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999999;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.custom-cursor.active, .custom-cursor-follower.active {
+    opacity: 1;
+}
+
+.custom-cursor {
+    width: 8px;
+    height: 8px;
+    background: var(--text-color, #ffffff);
+    mix-blend-mode: difference;
+    transition: transform 0.1s ease, width 0.3s, height 0.3s, background 0.3s, opacity 0.3s;
+}
+
+.custom-cursor-follower {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    transition: transform 0.3s ease-out, width 0.3s, height 0.3s, background 0.3s, opacity 0.3s;
+}
+
+body.no-cursor {
+    cursor: none !important;
+}
+
+body.no-cursor a, 
+body.no-cursor button, 
+body.no-cursor input, 
+body.no-cursor textarea, 
+body.no-cursor select,
+body.no-cursor .interactive {
+    cursor: none !important;
+}
+
+.custom-cursor.hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    background: var(--accent-color, #ffffff);
+}
+
+.custom-cursor-follower.hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: transparent;
+    backdrop-filter: none;
 }

@@ -782,3 +782,77 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/* =========================================
+   PREMIUM CUSTOM CURSOR LOGIC
+   ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if it's a touch device
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    if (!isTouchDevice) {
+        document.body.classList.add('no-cursor');
+        
+        const cursor = document.createElement('div');
+        cursor.classList.add('custom-cursor');
+        
+        const cursorFollower = document.createElement('div');
+        cursorFollower.classList.add('custom-cursor-follower');
+        
+        document.body.appendChild(cursor);
+        document.body.appendChild(cursorFollower);
+        
+        let mouseX = 0, mouseY = 0;
+        let followerX = 0, followerY = 0;
+        
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            
+            // Instantly move the small dot
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+            
+            if (!cursor.classList.contains('active')) {
+                cursor.classList.add('active');
+                cursorFollower.classList.add('active');
+            }
+        });
+        
+        // Smoothly follow with the large circle using requestAnimationFrame
+        const animate = () => {
+            followerX += (mouseX - followerX) * 0.15;
+            followerY += (mouseY - followerY) * 0.15;
+            
+            cursorFollower.style.left = followerX + 'px';
+            cursorFollower.style.top = followerY + 'px';
+            requestAnimationFrame(animate);
+        };
+        animate();
+        
+        // Add hover effects for interactive elements
+        const interactives = document.querySelectorAll('a, button, input, textarea, select, .interactive');
+        
+        interactives.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+                cursorFollower.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+                cursorFollower.classList.remove('hover');
+            });
+        });
+        
+        // Hide cursor when leaving the window
+        document.addEventListener('mouseleave', () => {
+            cursor.classList.remove('active');
+            cursorFollower.classList.remove('active');
+        });
+        
+        document.addEventListener('mouseenter', () => {
+            cursor.classList.add('active');
+            cursorFollower.classList.add('active');
+        });
+    }
+});
